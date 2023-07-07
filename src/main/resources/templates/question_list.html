@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Question Template</h2>
+    <table>
+        <thead>
+            <tr>제목</tr>
+            <tr>작성일시</tr>
+        </thead>
+        <tbody>
+            <tr th:each="question : ${questionList}">
+                <td th:text="${question.subject}"></td>
+                <td th:text="${question.createDate}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
