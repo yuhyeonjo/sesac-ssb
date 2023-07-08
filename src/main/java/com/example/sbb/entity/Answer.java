@@ -7,6 +7,7 @@ import org.springframework.cglib.core.Local;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -32,4 +33,8 @@ public class Answer {
     // Answer N : 1 SiteUser
     @ManyToOne
     private SiteUser author;
+
+    // Answer N : N voter
+    @ManyToMany
+    Set<SiteUser> voter;
 }

@@ -81,4 +81,13 @@ public class AnswerController {
 
     }
 
+    @PreAuthorize("isAuthenticated()") // 로그아웃 상태에서 로그인 페이지로 이동
+    @GetMapping("/vote/{id}")
+    public String answerVote(Principal principal, @PathVariable("id") Integer id) {
+        Answer answer = this.answerService.getAnswer(id);
+        SiteUser siteUser = this.userService.getUser(principal.getName());
+        this.answerService.vote(answer, siteUser);
+        return String.format("redirect:/question/detail/%s", answer.getQuestion().getId());
+    }
+
 }

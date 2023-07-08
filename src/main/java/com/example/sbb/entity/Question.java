@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -33,4 +34,8 @@ public class Question {
     // Question n : 1 SiteUser
     @ManyToOne
     private SiteUser author;
+
+    // Question n : n voter
+    @ManyToMany
+    Set<SiteUser> voter;
 }
