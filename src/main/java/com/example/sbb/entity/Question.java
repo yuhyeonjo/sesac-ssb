@@ -26,4 +26,9 @@ public class Question {
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
+
+
+    // Question n : 1 SiteUser
+    @ManyToOne
+    private SiteUser author;
 }

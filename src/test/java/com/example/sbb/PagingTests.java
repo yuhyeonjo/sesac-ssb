@@ -15,7 +15,7 @@ public class PagingTests extends SbbApplicationTests{
 //            String subject = String.format("테스트데이터 : [%03d]", i);
 //            String content = "테스트 데이터 내용";
 //
-//            this.questionService.create(subject, content);
+//            this.questionService.create(subject, content, null);
 //        }
 //    }
 }

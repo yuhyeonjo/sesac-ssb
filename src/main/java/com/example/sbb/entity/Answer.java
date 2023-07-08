@@ -26,4 +26,8 @@ public class Answer {
     // Answer N : 1 Question
     @ManyToOne
     private Question question;
+
+    // Answer N : 1 SiteUser
+    @ManyToOne
+    private SiteUser author;
 }
