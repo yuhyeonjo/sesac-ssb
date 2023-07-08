@@ -23,6 +23,8 @@ public class Answer {
     @CreatedDate
     private LocalDateTime createDate;
 
+    private LocalDateTime modifyDate;
+
     // Answer N : 1 Question
     @ManyToOne
     private Question question;
