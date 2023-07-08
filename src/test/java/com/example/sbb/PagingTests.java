@@ -18,4 +18,10 @@ public class PagingTests extends SbbApplicationTests{
 //            this.questionService.create(subject, content, null);
 //        }
 //    }
+
+    @Test
+    void Search() {
+
+    }
+
 }
